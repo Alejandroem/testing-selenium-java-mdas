@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -25,5 +26,13 @@ public class WebDriverOptionsTest {
         driver.getTitle();
         driver.getCurrentUrl();
         driver.getPageSource();
+
+        driver.navigate().to("https://the-internet.herokuapp.com/abtest");
+        driver.navigate().back();
+        driver.navigate().forward();
+        driver.navigate().refresh();
+
+        driver.navigate().to("https://the-internet.herokuapp.com");
+        driver.findElement(By.cssSelector("li"));
     }
 }
